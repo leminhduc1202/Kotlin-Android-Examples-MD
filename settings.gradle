@@ -10,3 +10,4 @@ rootProject.name = "Kotlin Android Examples"
 include ':app'
 include ':activitylifecycle'
 include ':animatedvectordrawble'
+include ':bottomnavigationview'

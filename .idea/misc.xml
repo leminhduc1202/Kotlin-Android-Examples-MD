@@ -7,6 +7,14 @@
         <entry key="..\:/Android Project/Persional Project/KotlinAndroidExamples/animatedvectordrawble/src/main/res/drawable/heart_beat_anim.xml" value="0.4041666666666667" />
         <entry key="..\:/Android Project/Persional Project/KotlinAndroidExamples/animatedvectordrawble/src/main/res/layout/activity_main.xml" value="0.37395833333333334" />
         <entry key="..\:/Android Project/Persional Project/KotlinAndroidExamples/app/src/main/res/layout/activity_main.xml" value="0.37395833333333334" />
+        <entry key="..\:/Android Project/Persional Project/KotlinAndroidExamples/bottomnavigationview/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.4041666666666667" />
+        <entry key="..\:/Android Project/Persional Project/KotlinAndroidExamples/bottomnavigationview/src/main/res/drawable/ic_home_black_24dp.xml" value="0.4041666666666667" />
+        <entry key="..\:/Android Project/Persional Project/KotlinAndroidExamples/bottomnavigationview/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.4041666666666667" />
+        <entry key="..\:/Android Project/Persional Project/KotlinAndroidExamples/bottomnavigationview/src/main/res/layout/activity_main.xml" value="0.3880208333333333" />
+        <entry key="..\:/Android Project/Persional Project/KotlinAndroidExamples/bottomnavigationview/src/main/res/layout/fragment_dashboard.xml" value="0.3880208333333333" />
+        <entry key="..\:/Android Project/Persional Project/KotlinAndroidExamples/bottomnavigationview/src/main/res/layout/fragment_home.xml" value="0.3880208333333333" />
+        <entry key="..\:/Android Project/Persional Project/KotlinAndroidExamples/bottomnavigationview/src/main/res/layout/fragment_notification.xml" value="0.3880208333333333" />
+        <entry key="..\:/Android Project/Persional Project/KotlinAndroidExamples/bottomnavigationview/src/main/res/menu/navigation.xml" value="0.3880208333333333" />
       </map>
     </option>
   </component>
