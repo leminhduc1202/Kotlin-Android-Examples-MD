@@ -4,32 +4,28 @@ import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.tabs.TabLayout
-import com.mdapp.bottomsheets.databinding.ActivityMainBinding
 import java.util.logging.Logger
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
     var sheetBehavior: BottomSheetBehavior<*>? = null
 
     companion object {
         val log = Logger.getLogger(MainActivity::class.java.name)
     }
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_main)
 
-        setSupportActionBar(binding.toolbar)
-        binding.toolbar.setTitleTextColor(Color.WHITE)
+        setSupportActionBar(findViewById(R.id.toolbar))
+        findViewById<Toolbar>(R.id.toolbar).setTitleTextColor(Color.WHITE)
         sheetBehavior = BottomSheetBehavior.from(findViewById(R.id.bottom_sheet_layout))
-        sheetBehavior?.setBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
-
+        sheetBehavior?.addBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
 
             override fun onSlide(bottomSheet: View, slideOffset: Float) {
                 log.info("On Slide")
@@ -40,6 +36,7 @@ class MainActivity : AppCompatActivity() {
             }
 
         })
+
         findViewById<TabLayout>(R.id.tab_layout).addTab(
             findViewById<TabLayout>(R.id.tab_layout).newTab()
                 .setIcon(R.drawable.ic_location_on_grey_600_24dp)
@@ -55,8 +52,7 @@ class MainActivity : AppCompatActivity() {
         val adapter = ViewPagerAdapter(supportFragmentManager)
         findViewById<ViewPager>(R.id.view_pager).adapter = adapter
         findViewById<ViewPager>(R.id.view_pager).addOnPageChangeListener(
-            TabLayout
-                .TabLayoutOnPageChangeListener(findViewById<TabLayout>(R.id.tab_layout))
+            TabLayout.TabLayoutOnPageChangeListener(findViewById(R.id.tab_layout))
         )
     }
 }

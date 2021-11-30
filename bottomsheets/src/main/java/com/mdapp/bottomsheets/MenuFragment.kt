@@ -4,14 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.view.menu.MenuAdapter
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
-import com.mdapp.bottomsheets.databinding.FragmentMenuBinding
+import androidx.recyclerview.widget.RecyclerView
 
 class MenuFragment : Fragment() {
 
-    private var fragmentbinding: FragmentMenuBinding? = null
     lateinit var pos: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,9 +35,7 @@ class MenuFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = FragmentMenuBinding.inflate(inflater, container, false)
-        fragmentbinding = binding
-
+        val v = inflater.inflate(R.layout.fragment_menu, container, false)
         when (pos) {
             "0" -> {
                 val imageList = listOf<Int>(
@@ -50,19 +46,18 @@ class MenuFragment : Fragment() {
                 )
                 val menuAdapter = MenuAdapter(requireActivity().applicationContext, imageList)
                 val grid = GridLayoutManager(activity, 2)
-                binding.recyclerView.layoutManager = grid
-                binding.recyclerView.adapter = menuAdapter
-
-
-            }
-            "1" ->{
+                v.findViewById<RecyclerView>(R.id.recycler_view).layoutManager = grid
+                v.findViewById<RecyclerView>(R.id.recycler_view).adapter = menuAdapter
 
             }
-            "2" ->{
+            "1" -> {
+
+            }
+            "2" -> {
 
             }
         }
-        return binding.root
+        return v
     }
 
 }

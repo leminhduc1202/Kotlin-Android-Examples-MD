@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/bottomnavigationview" />
             <option value="$PROJECT_DIR$/bottomsheets" />
+            <option value="$PROJECT_DIR$/databinding" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
