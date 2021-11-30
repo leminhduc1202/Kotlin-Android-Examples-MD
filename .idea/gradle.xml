@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/bottomsheets" />
             <option value="$PROJECT_DIR$/databinding" />
             <option value="$PROJECT_DIR$/diffutil" />
+            <option value="$PROJECT_DIR$/listadapter" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
